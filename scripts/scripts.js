@@ -423,12 +423,9 @@ async function loadRails() {
 }
 
 async function loadLauchAndAnalytics() {
-  const launchPromise = loadScript(
-    'https://assets.adobedtm.com/a7d65461e54e/6e9802a06173/launch-e6bd665acc0a-development.min.js',
-    {
-      async: true,
-    },
-  );
+  const launchPromise = loadScript(`${window.hlx.codeBasePath}/scripts/ananlytics/launch.min.js`, {
+    async: true,
+  });
   // eslint-disable-next-line no-unused-vars
   Promise.all([launchPromise, libAnalyticsModulePromise]).then(([launch, libAnalyticsModule]) => {
     const { pageLoadModel, linkClickModel } = libAnalyticsModule;
