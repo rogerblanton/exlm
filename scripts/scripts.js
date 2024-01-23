@@ -423,7 +423,7 @@ async function loadRails() {
 }
 
 async function loadLauchAndAnalytics() {
-  const launchPromise = loadScript(`${window.hlx.codeBasePath}/scripts/ananlytics/launch.min.js`, {
+  const launchPromise = loadScript(`${window.hlx.codeBasePath}/scripts/analytics/launch.min.js`, {
     async: true,
   });
   // eslint-disable-next-line no-unused-vars
